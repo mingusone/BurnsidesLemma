@@ -1,6 +1,6 @@
 def BurnsidesLemma(h,w,s):
   longer_edge = max([h,w])
-  if (h%2): #if h is odd, add 1. 
+  if (h%2): #if h is odd, add 1. Same with width. This is relevant as the center column or row will matter in further calculations.
     h+=1
   if (w%2):
     w+=1  
