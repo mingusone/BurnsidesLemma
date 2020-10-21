@@ -11,10 +11,12 @@ def BurnsidesLemma(h,w,s):
   
   fix_bpq = (s**((h)*(w//2)))
 
-  fix_rs = s**((((h*w))/2)+(longer_edge/2)) #unfinished. This should be disabled if w!=h because it will never be identical?
+  #unfinished. This should be disabled if w!=h because diagonal reflections would never stabilize a non-square board.
+  fix_rs = s**((((h*w))/2)+(longer_edge/2)) 
 
   # The below could be hardcoded but the reason we isolate them is because we were running multiple for loops to try to find the
-  # correct number of each symmetries to use given X orbits. Reverse engineering nonsense. 
+  # correct number of each symmetries to use given X orbits. Reverse engineering nonsense. It was a for a Foobar challenge where 
+  # I misinterpreted what kind of symmetries they were looking for. 
   how_many_i = 1
   how_many_ac = 2
   how_many_bpq = 3
